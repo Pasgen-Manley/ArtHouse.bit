@@ -1,1 +1,1 @@
-# NFTArtHouse
+# ArtHouse.bit
