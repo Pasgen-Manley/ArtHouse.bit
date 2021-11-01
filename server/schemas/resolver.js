@@ -8,8 +8,8 @@ const resolvers = {
   },
 
   Mutation: {
-    addProject: async (parent, { name, description, releaseDate, website, twitter, discord, openSea }) => {
-      return Project.create({ name, description, releaseDate, website, twitter, discord, openSea });
+    addProject: async (parent, { projectName, description, releaseDate, website, twitter, discord, openSea }) => {
+      return Project.create({ projectName, description, releaseDate, website, twitter, discord, openSea });
     },
   },
 };
