@@ -1,30 +1,39 @@
 const { Schema, model } = require('mongoose');
+const dateFormat = require('../utils/dateFormat');
 
 const projectSchema = new Schema({
   projectName: {
     type: String,
     required: true,
+    trim: true,
   },
   description: {
     type: String,
-    maxLength: 80,
+    minlength: 1,
+    maxLength: 280,
     require: true,
+    trim: true,
   },
   releaseDate: {
     type: Date,
     required: true,
+    get: (timestamp) => dateFormat(timestamp),
   },
   website: {
     type: String,
+    trim: true,
   },
   twitter: {
     type: String,
+    trim: true,
   },
   discord: {
     type: String,
+    trim: true,
   },
   openSea: {
-    type: String
+    type: String,
+    trim: true,
   },
 });
 
