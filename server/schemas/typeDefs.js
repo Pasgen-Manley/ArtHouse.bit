@@ -12,7 +12,6 @@ const typeDefs = gql`
     _id: ID!
     projectName: String!
     description: String!
-    releaseDate: Date!
     website: String
     twitter: String
     discord: String
@@ -34,7 +33,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addProject(
-      projectName: String!, description: String!, releaseDate: Date!, website: String, twitter: String, discord: String, openSea: String
+      projectName: String!, description: String!, website: String, twitter: String, discord: String, openSea: String
     ): Project
   }
 `;

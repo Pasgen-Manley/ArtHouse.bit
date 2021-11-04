@@ -9,6 +9,11 @@ import Auth from '../../utils/auth';
 
 const ProjectForm = () => {
   const [projectName, setProjectName] = useState('');
+  const [description, setDescription] = useState('');
+  const [website, setWebsite] = useState('');
+  const [twitter, setTwitter] = useState('');
+  const [discord, setDiscord] = useState('');
+  const [openSea, setOpenSea] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -35,7 +40,6 @@ const ProjectForm = () => {
         variables: {
           projectName,
           description,
-          releaseDate,
           website,
           twitter,
           discord,
@@ -44,6 +48,12 @@ const ProjectForm = () => {
       });
 
       setProjectName('');
+      setDescription('');
+      setReleaseDate('');
+      setWebsite('');
+      setTwitter('');
+      setDiscord('');
+      setOpenSea('');
     } catch (err) {
       console.error(err);
     }
@@ -145,7 +155,7 @@ const ProjectForm = () => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your project. Please{' '}
+          You need to be logged in to share your project.
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}

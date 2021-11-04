@@ -16,7 +16,6 @@ export const QUERY_PROJECTS = gql`
       _id
       projectName
       description
-      releaseDate
       website
       twitter
       discord
