@@ -163,4 +163,4 @@ const ProjectForm = () => {
   );
 };
 
-export default ProjectForm;
+export default UploadForm;
