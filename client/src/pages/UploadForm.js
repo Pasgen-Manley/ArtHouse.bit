@@ -75,12 +75,37 @@ const ProjectForm = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'projectName' && value.length <= 280) {
-      setProjectName(value);
-      setCharacterCount(value.length);
+    switch (name) {
+      case "projectName":
+        setProjectName(value);
+        setCharacterCount(value.length);
+        break;
+      case "description":
+        setDescription(value);
+        setCharacterCount(value.length);
+        break;
+      case "website":
+        setWebsite(value);
+        setCharacterCount(value.length);
+        break;
+      case "twitter":
+        setTwitter(value);
+        setCharacterCount(value.length);
+        break;
+      case "discord":
+        setDiscord(value);
+        setCharacterCount(value.length);
+        break;
+      case "OpenSea":
+        setOpenSea(value);
+        setCharacterCount(value.length);
+        break;
+      default:
     }
   };
+  
 
+  
   return (
     <Flex
       minH={'100vh'}
@@ -106,7 +131,7 @@ const ProjectForm = () => {
                     className="form-input"
                     id="form-input"
                     placeholder="Please enter the name of your project"
-                    name="project name"
+                    name="projectName"
                     type="text"
                     value={projectName}
                     onChange={handleChange} 
