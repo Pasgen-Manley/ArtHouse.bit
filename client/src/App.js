@@ -45,7 +45,7 @@ function App() {
       <Router>
         <NavBar />
         <div className="container">
-          <Route exact path="share">
+          <Route exact path="/share">
             <ProjectForm />
           </Route>
         </div>

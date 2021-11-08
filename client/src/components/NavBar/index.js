@@ -7,7 +7,6 @@ import {
   Stack,
   Collapse,
   Icon,
-  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -21,6 +20,8 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons';
+
+import {Link} from "react-router-dom";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -111,7 +112,7 @@ const DesktopNav = () => {
             <PopoverTrigger>
               <Link
                 p={2}
-                href={navItem.href ?? '#'}
+                to={navItem.to ?? '#'}
                 fontSize={'sm'}
                 fontWeight={500}
                 color={linkColor}
@@ -145,10 +146,10 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }) => {
+const DesktopSubNav = ({ label, to, subLabel }) => {
   return (
     <Link
-      href={href}
+      to={to}
       role={'group'}
       display={'block'}
       p={2}
@@ -192,7 +193,7 @@ const MobileNav = () => {
   );
 };
 
-const MobileNavItem = ({ label, children, href }) => {
+const MobileNavItem = ({ label, children, to }) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
@@ -200,7 +201,7 @@ const MobileNavItem = ({ label, children, href }) => {
       <Flex
         py={2}
         as={Link}
-        href={href ?? '#'}
+        to={to ?? '#'}
         justify={'space-between'}
         align={'center'}
         _hover={{
@@ -232,7 +233,7 @@ const MobileNavItem = ({ label, children, href }) => {
           align={'start'}>
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link key={child.label} py={2} to={child.to}>
                 {child.label}
               </Link>
             ))}
@@ -245,14 +246,14 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: 'Explore NFTs',
-    href: '#explore',
+    to: '/explore',
   },
   {
-    label: 'Share your Project',
-    href: '#share',
+    label: 'Share Your Project',
+    to: '/share',
   },
   {
     label: 'Contact',
-    href: '#contact',
+    to: '/contact',
   },
 ];
