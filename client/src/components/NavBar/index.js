@@ -74,7 +74,7 @@ export default function WithSubnavigation() {
             fontSize={'sm'}
             fontWeight={400}
             variant={'link'}
-            href={'#'}>
+            href={'/login'}>
             Sign In
           </Button>
           <Button
@@ -83,7 +83,10 @@ export default function WithSubnavigation() {
             fontWeight={600}
             color={'white'}
             bg={'pink.400'}
-            href={'#'}
+            padding={2}
+            as={'a'}
+            variant={'link'}
+            href={'/signUp'}
             _hover={{
               bg: 'pink.300',
             }}>
