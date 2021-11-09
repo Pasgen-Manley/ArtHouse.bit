@@ -13,6 +13,7 @@ import NavBar from './components/NavBar';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import UploadForm from './pages/UploadForm';
+import ExploreNFTs from './pages/ExploreNFTs';
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,6 +44,9 @@ function App() {
       <Router>
         <NavBar />
         <div className="container">
+          <Route exact path="/explore">
+            <ExploreNFTs />
+          </Route>
           <Route exact path="/share">
             <UploadForm />
           </Route>

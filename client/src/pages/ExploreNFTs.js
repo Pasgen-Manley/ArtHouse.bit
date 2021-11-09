@@ -43,7 +43,7 @@ const Projects = () => {
         </div>
       </div>
     </main>
-  )
+  );
 }
 
 export default ExploreNFTs;
