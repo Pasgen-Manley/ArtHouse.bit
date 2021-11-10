@@ -38,8 +38,8 @@ const resolvers = {
 
       return { token, user };
     },
-    addProject: async (parent, { projectName, description, website, twitter, discord, openSea }) => {
-      return Project.create({ projectName, description, website, twitter, discord, openSea });
+    addProject: async (parent, { projectName, description, website, twitter, discord, openSea, image }) => {
+      return Project.create({ projectName, description, website, twitter, discord, openSea, image });
     },
   },
 };

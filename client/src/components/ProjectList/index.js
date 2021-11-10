@@ -33,7 +33,7 @@ const ProjectList = ({ projects }) => {
       bg={useColorModeValue('gray.50', 'gray.800')}>
       <Stack spacing={8} mx={'auto'} w={'80%'} py={12} px={1}>
         <Stack align={'center'}>
-          <Heading fontSize={'3xl'}>Explore the lastest Projects Added!</Heading>
+          <Heading fontSize={'3xl'}>Explore These Great NFT Projects!</Heading>
         </Stack>
         <VStack
           divider={<StackDivider borderColor="gray.200" />}
@@ -47,6 +47,7 @@ const ProjectList = ({ projects }) => {
               shadow={'dark-lg'}
               borderLeftRadius="10"
               borderRightRadius="10"
+              key={projects._id}
             >
               {/*<Box 
                 rounded={'lg'}
@@ -55,7 +56,7 @@ const ProjectList = ({ projects }) => {
                 bg={useColorModeValue('gray.50', 'purple.800')}
               >*/}
               <Box w="100%" h="100%" bg={useColorModeValue('gray.50', 'purple.800')} borderLeftRadius="10" >
-                <Image src={'images/Bears-Deluxe.png'} alt={'NFT example'} left={''} boxSize="200px" />
+                <Image src={projects.image || '/images/Bears-Deluxe.png'} alt={'NFT example'} left={''} boxSize="200px" />
               </Box>
               <Box w="100%" h="100%" bg={useColorModeValue('gray.50', 'purple.800')}>
                 <Heading fontSize={'3x1'} textAlign={'flex-start'}>{projects.projectName}</Heading>

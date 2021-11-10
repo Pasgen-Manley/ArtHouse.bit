@@ -20,6 +20,7 @@ export const QUERY_PROJECTS = gql`
       twitter
       discord
       openSea
+      image
     }
   }
 `;

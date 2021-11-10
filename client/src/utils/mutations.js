@@ -25,8 +25,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_PROJECT = gql`
-  mutation addProject($projectName: String!, $description: String!, $website: String, $twitter: String, $discord: String, $openSea: String) {
-    addProject(projectName: $projectName, description: $description, website: $website, twitter: $twitter, discord: $discord, openSea: $openSea) {
+  mutation addProject($projectName: String!, $description: String!, $website: String, $twitter: String, $discord: String, $openSea: String, $image: String) {
+    addProject(projectName: $projectName, description: $description, website: $website, twitter: $twitter, discord: $discord, openSea: $openSea, image: $image) {
       _id
       projectName
       description
@@ -34,6 +34,7 @@ export const ADD_PROJECT = gql`
       twitter
       discord
       openSea
+      image
     }
   }
 `;

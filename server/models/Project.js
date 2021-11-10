@@ -29,6 +29,10 @@ const projectSchema = new Schema({
     type: String,
     trim: true,
   },
+  image: {
+    type: String,
+    trim: true,
+  },
 });
 
 const Project = model('Project', projectSchema);

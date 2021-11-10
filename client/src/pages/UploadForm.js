@@ -27,6 +27,7 @@ const ProjectForm = () => {
   const [twitter, setTwitter] = useState('');
   const [discord, setDiscord] = useState('');
   const [openSea, setOpenSea] = useState('');
+  const [image, setImage] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -57,6 +58,7 @@ const ProjectForm = () => {
           twitter,
           discord,
           openSea,
+          image,
         },
       });
 
@@ -67,6 +69,7 @@ const ProjectForm = () => {
       setTwitter('');
       setDiscord('');
       setOpenSea('');
+      setImage('');
     } catch (err) {
       console.error(err);
     }
@@ -98,6 +101,10 @@ const ProjectForm = () => {
         break;
       case "OpenSea":
         setOpenSea(value);
+        setCharacterCount(value.length);
+        break;
+      case "image":
+        setImage(value);
         setCharacterCount(value.length);
         break;
       default:
@@ -197,15 +204,27 @@ const ProjectForm = () => {
                     onChange={handleChange} 
                   />
                 </FormControl>
+                <FormControl id="image">
+                  <FormLabel>Display NFT</FormLabel>
+                  <Input 
+                    className="form-input"
+                    id="form-input"
+                    placeholder="Embed Display URL"
+                    name="image"
+                    type="url"
+                    value={image}
+                    onChange={handleChange}
+                  />
+                </FormControl>
                 <Stack spacing={10}>
                   <Button
-                    type="sumbmit"
+                    type="submit"
                     bg={'pink.500'}
                     color={'white'}
                     _hover={{
                       bg: 'pink.400',
                     }}>
-                    Sign Up
+                    Upload
                   </Button>
                 </Stack>
               </Stack>
