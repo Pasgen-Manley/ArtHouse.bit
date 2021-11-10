@@ -154,7 +154,7 @@ const ProjectForm = () => {
                   <Input 
                     className="form-input"
                     id="form-input"
-                    placeholder="Your website URL"
+                    placeholder="Website URL"
                     name="website"
                     type="url"
                     value={website}
@@ -166,7 +166,7 @@ const ProjectForm = () => {
                   <Input 
                     className="form-input"
                     id="form-input"
-                    placeholder="Please enter the twitter associated with your project"
+                    placeholder="Projects twitter"
                     name="twitter"
                     type="url"
                     value={twitter}
@@ -178,7 +178,7 @@ const ProjectForm = () => {
                   <Input 
                     className="form-input"
                     id="form-input"
-                    placeholder="Please your projects dirscord server"
+                    placeholder="Projects discord server"
                     name="discord"
                     type="url"
                     value={discord}
@@ -190,7 +190,7 @@ const ProjectForm = () => {
                   <Input 
                     className="form-input"
                     id="form-input"
-                    placeholder="Please enter the official project page on OpenSea"
+                    placeholder="Official page on OpenSea"
                     name="OpenSea"
                     type="url"
                     value={openSea}

@@ -55,11 +55,11 @@ const ProjectList = ({ projects }) => {
                 bg={useColorModeValue('gray.50', 'purple.800')}
               >*/}
               <Box w="100%" h="100%" bg={useColorModeValue('gray.50', 'purple.800')} borderLeftRadius="10" >
-                <Image src={''} alt={'NFT examples'} left={''} boxSize="200px" />
+                <Image src={'images/Bears-Deluxe.png'} alt={'NFT example'} left={''} boxSize="200px" />
               </Box>
               <Box w="100%" h="100%" bg={useColorModeValue('gray.50', 'purple.800')}>
-                <Heading fontSize={'3x1'} textAlign={'center'}>{projects.projectName}</Heading>
-                <h3 fontSize={'1x1'} align={'center'}>{projects.description}</h3>
+                <Heading fontSize={'3x1'} textAlign={'flex-start'}>{projects.projectName}</Heading>
+                <h3 fontSize={'1x1'} align={'flex-start'}>{projects.description}</h3>
               </Box>
               <Box w="100%" h="100%" bg={useColorModeValue('gray.50', 'purple.800')} borderRightRadius="10">
                 <div>
@@ -69,15 +69,15 @@ const ProjectList = ({ projects }) => {
                     </a>
                   </div>
                   <a href={projects.discord} target='_blank'>
-                    <Image width='5' height='5' float='left' mt={1} src={'images/Discord-Logo-Color.png'}/>
+                    <Image width='5' height='5' float='left' mt={3} src={'images/Discord-Logo-Color.png'}/>
                     <Text mt={2}>Discord</Text>
                   </a>
                   <a href={projects.twitter} target='_blank'>
-                    <Image width='5' height='5' float='left' mt={1} src={'images/twitter.png'}/>
+                    <Image width='5' height='5' float='left' mt={3} src={'images/twitter.png'}/>
                     <Text mt={2}>{projects.twitter}</Text>
                   </a>
                   <a href={projects.openSea} target='_blank'>
-                    <Image width='5' height='5' float='left' mt={1} src={'images/OpenSea-Logomark-Blue.png'}/>
+                    <Image width='5' height='5' float='left' mt={3} src={'images/OpenSea-Logomark-Blue.png'}/>
                     <Text mt={2}>OpenSea</Text>
                   </a>
                 </div>
