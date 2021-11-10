@@ -20,7 +20,7 @@ import {
 import ProjectList from '../components/ProjectList';
 import { QUERY_PROJECTS } from '../utils/queries';
 
-const Projects = () => {
+const ExploreNFTs = () => {
   const { loading, data } = useQuery(QUERY_PROJECTS);
   const projects = data?.projects || [];
 

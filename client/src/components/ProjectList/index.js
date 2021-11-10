@@ -15,20 +15,23 @@ import {
   Heading,
   useColorModeValue,
   Image,
+  SimpleGrid,
+  Grid,
+  Text,
 } from '@chakra-ui/react';
 
-const ArticleList = ({ projects }) => {
+const ProjectList = ({ projects }) => {
   if (projects && !projects.length) {
     return <h3>Can't find any articles!</h3>
   }
 
   return (
     <Flex
-      minH={'100vh'}
+      minH={'20vh'}
       align={'center'}
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}>
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={12}>
+      <Stack spacing={8} mx={'auto'} w={'80%'} py={12} px={1}>
         <Stack align={'center'}>
           <Heading fontSize={'3xl'}>Explore the lastest Projects Added!</Heading>
         </Stack>
@@ -38,32 +41,49 @@ const ArticleList = ({ projects }) => {
           align="stretch"
         >
           {projects.map((projects) => (
-            <Box 
-              rounded={'lg'}
-              boxShadow={'lg'}
-              key={projects._id}
+            <Grid
+              h="200px"
+              templateColumns="repeat(3, 1fr)"
+              shadow={'dark-lg'}
+              borderLeftRadius="10"
+              borderRightRadius="10"
             >
-              <Image src={''} alt={'NFT examples'} left={''} boxSize="200px" />
-              <Heading fontSize={'2x1'} right={''}>{projects.projectName}</Heading>
-              <Heading fontSize={'1x1'} right={''}>{projects.description}</Heading>
-              <div>
-                <a href={projects.website}>
-                  <span>{projects.website}</span>
-                </a>
-                <a href={projects.discord}>
-                  <Image src={'../assets/Discord-Logo-Color.png'}/>
-                  <span>Discord</span>
-                </a>
-                <a href={projects.twitter}>
-                  <Image src={'../assets/twitter.png'}/>
-                  <span>{projects.twitter}</span>
-                </a>
-                <a href={projects.openSea}>
-                  <Image src={'../assets/OpenSea-Logomark-Blue.png'}/>
-                  <span>OpenSea</span>
-                </a>
-              </div>
-            </Box>
+              {/*<Box 
+                rounded={'lg'}
+                boxShadow={'lg'}
+                key={projects._id}
+                bg={useColorModeValue('gray.50', 'purple.800')}
+              >*/}
+              <Box w="100%" h="100%" bg={useColorModeValue('gray.50', 'purple.800')} borderLeftRadius="10" >
+                <Image src={''} alt={'NFT examples'} left={''} boxSize="200px" />
+              </Box>
+              <Box w="100%" h="100%" bg={useColorModeValue('gray.50', 'purple.800')}>
+                <Heading fontSize={'3x1'} textAlign={'center'}>{projects.projectName}</Heading>
+                <h3 fontSize={'1x1'} align={'center'}>{projects.description}</h3>
+              </Box>
+              <Box w="100%" h="100%" bg={useColorModeValue('gray.50', 'purple.800')} borderRightRadius="10">
+                <div>
+                  <div>
+                    <a href={projects.website} target='_blank'>
+                      <span>{projects.website}</span>
+                    </a>
+                  </div>
+                  <a href={projects.discord} target='_blank'>
+                    <Image width='5' height='5' float='left' mt={1} src={'images/Discord-Logo-Color.png'}/>
+                    <Text mt={2}>Discord</Text>
+                  </a>
+                  <a href={projects.twitter} target='_blank'>
+                    <Image width='5' height='5' float='left' mt={1} src={'images/twitter.png'}/>
+                    <Text mt={2}>{projects.twitter}</Text>
+                  </a>
+                  <a href={projects.openSea} target='_blank'>
+                    <Image width='5' height='5' float='left' mt={1} src={'images/OpenSea-Logomark-Blue.png'}/>
+                    <Text mt={2}>OpenSea</Text>
+                  </a>
+                </div>
+              </Box>
+              {/*</Box>*/}
+            </Grid>
           ))}
         </VStack>
       </Stack>
