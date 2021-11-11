@@ -17,7 +17,7 @@ A Web application that specifically deals with art on various blockchains aka NF
 
 ## Usage
 Open the application via the deployed Heroku link below.
-LINK: 
+LINK: https://arcane-depths-63375.herokuapp.com/explore
 
 OR once you have cloned the repository
   * In your terminal / console invoke the commenad:
@@ -29,7 +29,8 @@ Users can Sign Up can sign up to the web page and then upload their own NFT proj
 Any user can view the projects on the display page with or without being signed in. 
 
 An example screenshot of the Explore Page.
-![NFT projects Screenshot]()
+![ArtHouse bit](https://user-images.githubusercontent.com/82016491/141299629-b77e69dc-ab93-48e3-835d-3accde6952db.png)
+
 
 ## License
 This application is covered under the MIT license.
