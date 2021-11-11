@@ -58,7 +58,7 @@ const Login = (props) => {
           {data ? (
               <p>
                 Success! Taking you {' '}
-                <Link to="/">Explore NFTs.</Link>
+                <Link to="/explore">Explore NFTs.</Link>
               </p>
             ) : (
           <form onSubmit={handleFormSubmit}>

@@ -124,12 +124,19 @@ const ProjectForm = () => {
           <Heading fontSize={'3xl'}>Let us know what you project is all about!</Heading>
           <Heading fontSize={'1xl'}>Fill out the sections below and your project will be ready to be displayed to our community!</Heading>
         </Stack>
-        {/*{Auth.loggedIn() ? (   */}
+        {Auth.loggedIn() ? (
           <Box
             rounded={'lg'}
             bg={useColorModeValue('white', 'gray.700')}
             boxShadow={'lg'}
-            p={8}>
+            p={8}
+          >
+            {data ? (
+              <p>
+                Success! Taking you {' '}
+                <Link to="/explore">Explore NFTs.</Link>
+              </p>
+            ) : (
             <form onSubmit={handleFormSubmit}>
               <Stack spacing={4}>
                 <FormControl id="name">
@@ -229,18 +236,19 @@ const ProjectForm = () => {
                 </Stack>
               </Stack>
             </form>
+          )}
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}
               </div>
             )}
           </Box>
-        {/*}) : (
+        ) : (
           <p>
             You need to be logged in to share your project.
             <Link to="/login"> login</Link> or <Link to="/signup">signup to continue!</Link>
           </p>
-        )}*/}
+        )}
       </Stack>
     </Flex>
   );
