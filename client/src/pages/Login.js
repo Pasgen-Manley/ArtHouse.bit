@@ -51,7 +51,7 @@ const Login = (props) => {
 
   return (
     <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
-      <Flex p={8} flex={1} align={'center'} justify={'center'}>
+      <Flex p={8} flex={1} align={'center'} justify={'center'} mb={10}>
         <Stack spacing={4} w={'full'} maxW={'md'}>
           <Heading fontSize={'2xl'}>Sign in to your account</Heading>
           {data ? (
