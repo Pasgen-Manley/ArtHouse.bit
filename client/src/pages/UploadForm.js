@@ -131,12 +131,6 @@ const ProjectForm = () => {
             boxShadow={'lg'}
             p={8}
           >
-            {data ? (
-              <p>
-                Success! Taking you {' '}
-                <Link to="/explore">Explore NFTs.</Link>
-              </p>
-            ) : (
             <form onSubmit={handleFormSubmit}>
               <Stack spacing={4}>
                 <FormControl id="name">
@@ -236,7 +230,6 @@ const ProjectForm = () => {
                 </Stack>
               </Stack>
             </form>
-          )}
             {error && (
               <div className="my-3 p-3 bg-danger text-white">
                 {error.message}

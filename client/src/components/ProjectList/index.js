@@ -1,21 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import {
   Flex,
   Box,
-  FormControl,
-  FormLabel,
-  Input,
   Stack,
-  HStack,
   VStack,
   StackDivider,
-  Button,
   Heading,
   useColorModeValue,
   Image,
-  SimpleGrid,
   Grid,
   Text,
 } from '@chakra-ui/react';
@@ -49,14 +42,8 @@ const ProjectList = ({ projects }) => {
               borderRightRadius="10"
               key={projects._id}
             >
-              {/*<Box 
-                rounded={'lg'}
-                boxShadow={'lg'}
-                key={projects._id}
-                bg={useColorModeValue('gray.50', 'purple.800')}
-              >*/}
               <Box w="100%" h="100%" bg={useColorModeValue('gray.50', 'purple.800')} borderLeftRadius="10" >
-                <Image src={projects.image || '/images/Bears-Deluxe.png'} alt={'NFT example'} left={''} boxSize="200px" />
+                <Image src={projects.image || '/images/Bears-Deluxe.png'} alt={'NFT example'} boxSize="200px" />
               </Box>
               <Box w="100%" h="100%" bg={useColorModeValue('gray.50', 'purple.800')}>
                 <Heading fontSize={'3x1'} textAlign={'flex-start'}>{projects.projectName}</Heading>
@@ -83,7 +70,6 @@ const ProjectList = ({ projects }) => {
                   </a>
                 </div>
               </Box>
-              {/*</Box>*/}
             </Grid>
           ))}
         </VStack>
